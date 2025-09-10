@@ -56,7 +56,7 @@ export const developmentTeam = [
     name: "Jan Frenking",
     position: "Senior Project Development Manager",
     email: "j.frenking@gc.dev",
-    phone: "+49 151 551 404 51"
+    phone: "+49 681 933 566 77"
   },
   {
     name: "Nils Wellstein",
@@ -68,13 +68,13 @@ export const developmentTeam = [
     name: "Tim Wagner",
     position: "Senior Project Development Manager",
     email: "t.wagner@gc.dev",
-    phone: "+49 173 721 38 19"
+    phone: "+49 681 933 566 77"
   },
   {
     name: "Jürgen Tiemann",
     position: "Land Acquisition & Development Manager",
     email: "j.tiemann@gc.dev",
-    phone: "+49 162 648 37 80"
+    phone: "+49 681 933 566 77"
   }
 ];
 

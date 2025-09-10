@@ -142,7 +142,7 @@ ${t.contact.form.emailTemplate.signature}`;
             <Card className="p-8 shadow-lg">
               <CardContent className="p-0">
                 <h3 className="text-2xl font-bold text-gray-900 mb-6">
-                  Nachricht senden
+                  {t.contact.form.title}
                 </h3>
                 
                 <form onSubmit={handleSubmit} className="space-y-6">
@@ -159,7 +159,7 @@ ${t.contact.form.emailTemplate.signature}`;
                         value={formData.name}
                         onChange={handleInputChange}
                         className="w-full"
-                        placeholder="Ihr vollständiger Name"
+                        placeholder={t.contact.form.placeholders.name}
                       />
                     </div>
                     
@@ -175,7 +175,7 @@ ${t.contact.form.emailTemplate.signature}`;
                         value={formData.email}
                         onChange={handleInputChange}
                         className="w-full"
-                        placeholder="ihre.email@beispiel.de"
+                        placeholder={t.contact.form.placeholders.email}
                       />
                     </div>
                   </div>
@@ -191,7 +191,7 @@ ${t.contact.form.emailTemplate.signature}`;
                       value={formData.company}
                       onChange={handleInputChange}
                       className="w-full"
-                      placeholder="Ihr Unternehmen (optional)"
+                      placeholder={t.contact.form.placeholders.company}
                     />
                   </div>
 
@@ -206,7 +206,7 @@ ${t.contact.form.emailTemplate.signature}`;
                       value={formData.subject}
                       onChange={handleInputChange}
                       className="w-full"
-                      placeholder="Betreff Ihrer Anfrage"
+                      placeholder={t.contact.form.placeholders.subject}
                     />
                   </div>
 
@@ -222,7 +222,7 @@ ${t.contact.form.emailTemplate.signature}`;
                       value={formData.message}
                       onChange={handleInputChange}
                       className="w-full resize-none"
-                      placeholder="Beschreiben Sie Ihr Projekt oder Ihre Anfrage..."
+                      placeholder={t.contact.form.placeholders.message}
                     />
                   </div>
 

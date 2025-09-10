@@ -125,29 +125,29 @@ export function TeamSection() {
 
                   {/* Expertise Areas */}
                   <div className="mb-6">
-                    <h5 className="font-semibold text-gray-900 mb-3">Expertise:</h5>
+                    <h5 className="font-semibold text-gray-900 mb-3">{t.team.expertise.title}</h5>
                     <div className="space-y-2">
                       {member.position.includes('GIS') && (
                         <div className="flex items-center gap-2">
                           <MapPin className="h-4 w-4 text-purple-600" />
-                          <span className="text-sm text-gray-600">GIS & Standortanalyse</span>
+                          <span className="text-sm text-gray-600">{t.team.expertise.gisAnalysis}</span>
                         </div>
                       )}
                       {member.position.includes('Senior') && (
                         <div className="flex items-center gap-2">
                           <Briefcase className="h-4 w-4 text-blue-600" />
-                          <span className="text-sm text-gray-600">Senior Projektmanagement</span>
+                          <span className="text-sm text-gray-600">{t.team.expertise.seniorManagement}</span>
                         </div>
                       )}
                       {member.position.includes('Land') && (
                         <div className="flex items-center gap-2">
                           <MapPin className="h-4 w-4 text-green-600" />
-                          <span className="text-sm text-gray-600">Flächenakquise & Entwicklung</span>
+                          <span className="text-sm text-gray-600">{t.team.expertise.landAcquisition}</span>
                         </div>
                       )}
                       <div className="flex items-center gap-2">
                         <Users className="h-4 w-4 text-orange-600" />
-                        <span className="text-sm text-gray-600">Stakeholder Management</span>
+                        <span className="text-sm text-gray-600">{t.team.expertise.stakeholderManagement}</span>
                       </div>
                     </div>
                   </div>

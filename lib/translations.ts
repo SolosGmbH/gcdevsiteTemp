@@ -1,4 +1,3 @@
-
 export const translations = {
   de: {
     nav: {
@@ -97,12 +96,20 @@ export const translations = {
       yearsExperience: "Jahre Gesamterfahrung",
       projectsManaged: "Betreute Projekte",
       countryFocus: "Länder Fokus",
-      mwDeveloped: "MW Entwickelt"
+      mwDeveloped: "MW Entwickelt",
+      expertise: {
+        title: "Expertise:",
+        gisAnalysis: "GIS & Standortanalyse",
+        seniorManagement: "Senior Projektmanagement",
+        landAcquisition: "Flächenakquise & Entwicklung",
+        stakeholderManagement: "Stakeholder Management"
+      }
     },
     contact: {
       title: "Kontakt",
       subtitle: "Haben Sie Fragen zu unseren Dienstleistungen oder möchten Sie ein Projekt mit uns besprechen?",
       form: {
+        title: "Nachricht senden",
         name: "Name",
         email: "E-Mail",
         company: "Unternehmen",
@@ -113,6 +120,13 @@ export const translations = {
         error: "Bitte füllen Sie alle Pflichtfelder aus.",
         defaultSubject: "Kontaktanfrage von der Website",
         requiredFields: "* Pflichtfelder",
+        placeholders: {
+          name: "Ihr vollständiger Name",
+          email: "ihre.email@beispiel.de",
+          company: "Ihr Unternehmen (optional)",
+          subject: "Betreff Ihrer Anfrage",
+          message: "Beschreiben Sie Ihr Projekt oder Ihre Anfrage..."
+        },
         emailTemplate: {
           greeting: "Hallo,",
           name: "Name",
@@ -242,12 +256,20 @@ export const translations = {
       yearsExperience: "Years Total Experience",
       projectsManaged: "Projects Managed",
       countryFocus: "Country Focus",
-      mwDeveloped: "MW Developed"
+      mwDeveloped: "MW Developed",
+      expertise: {
+        title: "Expertise:",
+        gisAnalysis: "GIS & Site Analysis",
+        seniorManagement: "Senior Project Management",
+        landAcquisition: "Land Acquisition & Development",
+        stakeholderManagement: "Stakeholder Management"
+      }
     },
     contact: {
       title: "Contact",
       subtitle: "Do you have questions about our services or would you like to discuss a project with us?",
       form: {
+        title: "Send Message",
         name: "Name",
         email: "Email",
         company: "Company",
@@ -258,6 +280,13 @@ export const translations = {
         error: "Please fill in all required fields.",
         defaultSubject: "Contact inquiry from website",
         requiredFields: "* Required fields",
+        placeholders: {
+          name: "Your full name",
+          email: "your.email@example.com",
+          company: "Your company (optional)",
+          subject: "Subject of your inquiry",
+          message: "Describe your project or inquiry..."
+        },
         emailTemplate: {
           greeting: "Hello,",
           name: "Name",
@@ -270,6 +299,7 @@ export const translations = {
       info: {
         address: "Address",
         phone: "Phone",
+        web: "Website",
         responseTime: {
           title: "Quick Response Guaranteed",
           description: "We typically respond to your inquiry within 24 hours. For urgent matters, you can also contact our development team directly."
@@ -280,8 +310,7 @@ export const translations = {
           saturday: "Sat: 09:00 - 14:00",
           sunday: "Sun: Closed",
           note: "Outside business hours, you can reach us via email."
-        },
-        web: "Website"
+        }
       }
     },
     footer: {
