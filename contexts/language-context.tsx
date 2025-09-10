@@ -1,25 +1,24 @@
-
 'use client';
 
-import React, { createContext, useContext, useState, useEffect } from 'react';
+import React, { createContext, useContext, useState, useEffect, useMemo } from 'react';
 import { Language, translations } from '@/lib/translations';
 
 interface LanguageContextType {
   language: Language;
   setLanguage: (language: Language) => void;
-  t: typeof translations.de | typeof translations.en;
+  t: typeof translations.de | typeof translations.en | typeof translations.es;
 }
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
-export function LanguageProvider({ children }: { children: React.ReactNode }) {
+export function LanguageProvider({ children }: Readonly<{ children: React.ReactNode }>) {
   const [language, setLanguage] = useState<Language>('de');
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
     setMounted(true);
     const savedLanguage = localStorage.getItem('language') as Language;
-    if (savedLanguage && (savedLanguage === 'de' || savedLanguage === 'en')) {
+    if (savedLanguage && (savedLanguage === 'de' || savedLanguage === 'en' || savedLanguage === 'es')) {
       setLanguage(savedLanguage);
     }
   }, []);
@@ -33,8 +32,14 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
 
   const t = mounted ? translations[language] : translations.de;
 
+  const contextValue = useMemo(() => ({
+    language,
+    setLanguage: changeLanguage,
+    t
+  }), [language, t]);
+
   return (
-    <LanguageContext.Provider value={{ language, setLanguage: changeLanguage, t }}>
+    <LanguageContext.Provider value={contextValue}>
       {children}
     </LanguageContext.Provider>
   );

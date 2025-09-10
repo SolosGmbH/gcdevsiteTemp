@@ -1,9 +1,7 @@
-
 'use client';
 
 import { useLanguage } from '@/contexts/language-context';
 import { Button } from '@/components/ui/button';
-import { Globe } from 'lucide-react';
 
 export function LanguageSwitcher() {
   const { language, setLanguage } = useLanguage();
@@ -33,6 +31,18 @@ export function LanguageSwitcher() {
         }`}
       >
         EN
+      </Button>
+      <Button
+        variant={language === 'es' ? 'default' : 'ghost'}
+        size="sm"
+        onClick={() => setLanguage('es')}
+        className={`text-xs px-3 py-1 ${
+          language === 'es' 
+            ? 'bg-green-600 text-white shadow-sm' 
+            : 'text-gray-600 hover:text-gray-900'
+        }`}
+      >
+        ES
       </Button>
     </div>
   );

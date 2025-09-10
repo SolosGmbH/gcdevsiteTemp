@@ -386,7 +386,201 @@ export const translations = {
         financing: "Financing"
       }
     }
+  },
+  es: {
+    nav: {
+      company: "Empresa",
+      services: "Servicios",
+      projects: "Proyectos",
+      team: "Equipo",
+      contact: "Contacto"
+    },
+    hero: {
+      tagline: "Nosotros. Planificamos. Construimos. Mantenemos. Operamos. Solar.",
+      subtitle: "Su socio confiable para proyectos fotovoltaicos - desde el desarrollo hasta la operación",
+      cta: "Solicitar Proyecto"
+    },
+    company: {
+      title: "GC Development Group & el Grupo",
+      subtitle: "La Empresa en Números",
+      pipeline: "Pipeline de Desarrollo",
+      rtbValue: "Valor RTB del Pipeline de Desarrollo",
+      employees: "Empleados",
+      employeesDesc: "con antecedentes multinacionales, habiendo trabajado en 8 países diferentes",
+      focus: "Enfoque en Solar, BESS e Híbrido",
+      projects: "Proyectos",
+      projectsDesc: "están incluidos en la facilidad de financiamiento de desarrollo de GC | pipeline de desarrollo asegurado",
+      founded2018: "Negocio de Desarrollo Fundado en 2018",
+      founded2009: "Fundada en 2009 en Alemania como Empresa Solar EPC",
+      installedCapacity: "Capacidad Instalada",
+      realizedProjects: "Proyectos Realizados",
+      co2Savings: "Millones de Toneladas de Ahorro de CO₂",
+      co2Note: "Ahorros estimados de CO₂ de plantas de energía solar comparado con plantas de carbón",
+      energyTransitionTitle: "Contribución de Greencells a la transición energética de Alemania"
+    },
+    services: {
+      title: "Desarrollo de Espacios Abiertos",
+      benefits: {
+        title: "¿Qué Beneficios Aporta la FV a los Propietarios de Terrenos?",
+        climateProtection: {
+          title: "Contribución a la Protección del Clima",
+          desc: "Al utilizar sus espacios abiertos para sistemas FV, hace una contribución importante a la protección ambiental y la reducción de emisiones de gases de efecto invernadero. Puede estar orgulloso de hacer una contribución activa a la lucha contra el cambio climático."
+        },
+        stableReturn: {
+          title: "Retornos Estables",
+          desc: "La inyección de electricidad a la red ofrece retornos a largo plazo y estables para propietarios de terrenos y comunidades"
+        },
+        efficientUse: {
+          title: "Uso Eficiente del Terreno",
+          desc: "Quizás tenga espacios abiertos que actualmente no se utilizan o se utilizan poco. Al usar estas áreas para sistemas FV, puede usar su terreno de manera eficiente y, junto con la comunidad, beneficiarse de áreas no utilizadas."
+        },
+        positioning: {
+          title: "Posicionamiento como Pionero",
+          desc: "Al usar energía renovable, usted y la comunidad pueden posicionarse como pioneros en protección ambiental y sostenibilidad. Esto puede tener un impacto positivo en su imagen, traerle relaciones públicas positivas y ayudar a que la comunidad sea percibida como una ubicación atractiva."
+        },
+        noInvestment: {
+          title: "Sin Costos de Inversión",
+          desc: "Como propietario de terreno, no tiene que asumir costos de inversión para el sistema FV. Nosotros en GC Development Group nos encargamos del desarrollo y construcción del sistema, así como del mantenimiento y conservación. Esto permite que todos los involucrados en el proyecto se enfoquen en sus competencias centrales mientras se benefician de las ventajas de la energía solar."
+        }
+      },
+      cooperation: {
+        title: "Ventajas de la Cooperación con GC Development Group",
+        items: [
+          "Asesoramiento sobre varias opciones de utilización FV",
+          "Desarrollo y construcción de sistemas FV llave en mano con tecnología de vanguardia",
+          "Apoyo con procedimientos de aprobación y cuestiones de financiamiento",
+          "Mantenimiento y conservación de su sistema FV",
+          "Adquisición asegurada a través de contratos marco con fabricantes de componentes de primera clase (calidad Tier 1)",
+          "Capacidades aseguradas / mano de obra en construcción • Sin riesgos de implementación",
+          "Capacidad de financiamiento ilimitada",
+          "Estrategia de integración respecto a la imagen del paisaje",
+          "Experiencia en implementación de estrategias de aceptación local (eventos informativos, explicaciones, integración de tours en eventos escolares, eventos de negocios locales)",
+          "Experiencia en implementación de modelos de participación local, si se desea",
+          "Cooperación con servicios públicos municipales (compra de electricidad, apoyo en operación y mantenimiento)",
+          "Ventajas de combinar desarrollo de proyectos y EPC – sin problemas de interfaz, sabemos lo que hacemos"
+        ]
+      },
+      badges: {
+        tier1Quality: "Calidad Tier 1",
+        turnkey: "Llave en Mano",
+        noImplementationRisk: "Sin riesgo de implementación",
+        epcDev: "EPC + Desarrollo"
+      },
+      process: {
+        title: "Fases de Desarrollo de Proyectos"
+      }
+    },
+    projects: {
+      title: "Proyectos de Referencia",
+      subtitle: "Nuestros proyectos fotovoltaicos realizados exitosamente en Alemania",
+      germany: "Alemania",
+      saarland: "Saarland",
+      totalCapacity: "Capacidad Total",
+      capacity: "Capacidad",
+      location: "Ubicación",
+      gridConnection: "Conexión a Red",
+      scope: "Alcance",
+      projects: "Proyectos",
+      overviewGermany: "Resumen de Proyectos de Alemania",
+      overviewSaarland: "Resumen de Proyectos de Saarland",
+      federalStates: "Estados Federales",
+      featured: {
+        title: "Proyecto Destacado: Hartungshof",
+        subtitle: "Nuestro último proyecto insignia en Saarland",
+        estimatedProduction: "Producción anual estimada",
+        householdsSupplied: "Suministra aprox. 7,000 hogares"
+      },
+      localExpertise: "Experiencia Local",
+      cta: {
+        title: "Su proyecto podría ser el siguiente",
+        description: "Desarrollemos y realicemos su proyecto FV juntos",
+        button: "Discutir proyecto ahora"
+      }
+    },
+    team: {
+      title: "Equipo de Desarrollo Alemania",
+      management: "Equipo de Gestión",
+      subtitle: "Nuestro equipo experimentado para desarrollo de proyectos en Alemania",
+      expertiseTitle: "Experiencia y Conocimiento",
+      expertiseDesc: "Nuestro Equipo de Desarrollo Alemania tiene años de experiencia en desarrollo de proyectos fotovoltaicos. Desde la evaluación inicial del sitio hasta la conexión a la red, lo guiamos a través de cada paso del proceso.",
+      yearsExperience: "Años de Experiencia Total",
+      projectsManaged: "Proyectos Gestionados",
+      countryFocus: "Enfoque de País",
+      mwDeveloped: "MW Desarrollados",
+      expertise: {
+        title: "Experiencia:",
+        gisAnalysis: "GIS y Análisis de Sitio",
+        seniorManagement: "Gestión Senior de Proyectos",
+        landAcquisition: "Adquisición y Desarrollo de Terrenos",
+        stakeholderManagement: "Gestión de Partes Interesadas"
+      },
+      cta: {
+        title: "Hable directamente con nuestro equipo",
+        description: "Para preguntas específicas sobre su proyecto, puede contactar a nuestros expertos directamente o usar el formulario de contacto general.",
+        button: "Formulario de contacto general"
+      }
+    },
+    contact: {
+      title: "Contacto",
+      subtitle: "¿Tiene preguntas sobre nuestros servicios o le gustaría discutir un proyecto con nosotros?",
+      form: {
+        title: "Enviar Mensaje",
+        name: "Nombre",
+        email: "Correo Electrónico",
+        company: "Empresa",
+        subject: "Asunto",
+        message: "Mensaje",
+        submit: "Abrir Correo",
+        success: "Su cliente de correo se abrirá. Por favor envíe el correo.",
+        error: "Por favor complete todos los campos requeridos.",
+        defaultSubject: "Consulta de contacto desde el sitio web",
+        requiredFields: "* Campos requeridos",
+        placeholders: {
+          name: "Su nombre completo",
+          email: "su.correo@ejemplo.com",
+          company: "Su empresa (opcional)",
+          subject: "Asunto de su consulta",
+          message: "Describa su proyecto o consulta..."
+        },
+        emailTemplate: {
+          greeting: "Hola,",
+          name: "Nombre",
+          email: "Correo Electrónico",
+          company: "Empresa",
+          message: "Mensaje",
+          signature: "Saludos cordiales"
+        }
+      },
+      info: {
+        address: "Dirección",
+        phone: "Teléfono",
+        web: "Sitio Web",
+        responseTime: {
+          title: "Respuesta Rápida Garantizada",
+          description: "Típicamente respondemos a su consulta dentro de 24 horas. Para asuntos urgentes, también puede contactar a nuestro equipo de desarrollo directamente."
+        },
+        businessHours: {
+          title: "Horario Comercial",
+          weekdays: "Lun - Vie: 08:00 - 18:00",
+          saturday: "Sáb: 09:00 - 14:00",
+          sunday: "Dom: Cerrado",
+          note: "Fuera del horario comercial, puede contactarnos por correo electrónico."
+        }
+      }
+    },
+    footer: {
+      copyright: "© 2025 GC Development Group. Todos los derechos reservados.",
+      legal: "Aviso Legal",
+      legalText: "El contenido de este documento es confidencial y no está destinado para distribución.",
+      servicesTitle: "Nuestros Servicios",
+      services: {
+        projectDevelopment: "Desarrollo de Proyectos",
+        epcServices: "Servicios EPC",
+        landAcquisition: "Adquisición de Terrenos",
+        financing: "Financiamiento"
+      }
+    }
   }
 } as const;
 
-export type Language = 'de' | 'en';
+export type Language = 'de' | 'en' | 'es';

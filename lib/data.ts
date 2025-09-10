@@ -1,4 +1,3 @@
-
 export const companyStats = {
   pipeline: "3.6 GW",
   rtbValue: "~€220 MILLIONEN",
@@ -16,7 +15,8 @@ export const managementTeam = [
     name: "Andreas Hoffmann",
     position: {
       de: "Geschäftsführer (CEO)",
-      en: "Chief Executive Officer"
+      en: "Chief Executive Officer",
+      es: "Director Ejecutivo (CEO)"
     },
     description: {
       de: [
@@ -28,6 +28,11 @@ export const managementTeam = [
         "Founder and Managing Partner",
         "Significant advancement of the company strategy to become one of the first second-generation EPC companies",
         "Entrepreneur and founder active in renewable energy, communications, event and leisure industries"
+      ],
+      es: [
+        "Fundador y Socio Gerente",
+        "Avance significativo de la estrategia de la empresa para convertirse en una de las primeras empresas EPC de segunda generación",
+        "Empresario y fundador activo en energías renovables, comunicaciones, industrias de eventos y ocio"
       ]
     }
   },
@@ -35,7 +40,8 @@ export const managementTeam = [
     name: "Pablo Cárdenas",
     position: {
       de: "Leiter Entwicklung (CDO)",
-      en: "Chief Development Officer"
+      en: "Chief Development Officer",
+      es: "Director de Desarrollo (CDO)"
     },
     description: {
       de: [
@@ -49,6 +55,12 @@ export const managementTeam = [
         "Over 14 years in the solar industry across Europe, South America and the Caribbean",
         "Comprehensive expertise across the entire PV value chain, from site origination to operating assets",
         "Defined key development processes that support the daily expansion of the development pipeline"
+      ],
+      es: [
+        "Con Greencells desde 2019",
+        "Más de 14 años en la industria solar en Europa, Sudamérica y el Caribe",
+        "Experiencia integral en toda la cadena de valor FV, desde la originación del sitio hasta los activos operativos",
+        "Definió procesos clave de desarrollo que apoyan la expansión diaria del pipeline de desarrollo"
       ]
     }
   },
@@ -56,7 +68,8 @@ export const managementTeam = [
     name: "Jonas Wilhelmi",
     position: {
       de: "Leiter Finanzen",
-      en: "Head of Finance"
+      en: "Head of Finance",
+      es: "Jefe de Finanzas"
     },
     description: {
       de: [
@@ -68,6 +81,11 @@ export const managementTeam = [
         "With Greencells since 2020",
         "Strategic leader in renewables, specialized in PV, with solid financial expertise in turnkey EPC and PV project development",
         "Leads finance strategy and control, optimizes resources, manages tax, accounting, compliance, controlling and treasury"
+      ],
+      es: [
+        "Con Greencells desde 2020",
+        "Líder estratégico en renovables, especializado en FV, con sólida experiencia financiera en EPC llave en mano y desarrollo de proyectos FV",
+        "Lidera la estrategia y control financiero, optimiza recursos, gestiona impuestos, contabilidad, cumplimiento, control y tesorería"
       ]
     }
   },
@@ -75,7 +93,8 @@ export const managementTeam = [
     name: "Darina Decheva",
     position: {
       de: "Leiterin Investment Management",
-      en: "Head of Investment Management"
+      en: "Head of Investment Management",
+      es: "Jefa de Gestión de Inversiones"
     },
     description: {
       de: [
@@ -87,6 +106,11 @@ export const managementTeam = [
         "With Greencells since 2019",
         "Experienced manager with 12+ years in renewable energy finance, specializing in M&A, structured finance and project finance in Europe and Africa",
         "Proven track record closing complex deals and leading cross-border clean energy transactions, with deep understanding of market trends and regulatory frameworks across multiple jurisdictions"
+      ],
+      es: [
+        "Con Greencells desde 2019",
+        "Gerente experimentada con más de 12 años en financiamiento de energías renovables, especializada en fusiones y adquisiciones, financiamiento estructurado y financiamiento de proyectos en Europa y África",
+        "Historial comprobado cerrando acuerdos complejos y liderando transacciones transfronterizas de energía limpia, con profundo entendimiento de tendencias de mercado y marcos regulatorios en múltiples jurisdicciones"
       ]
     }
   }
@@ -97,7 +121,8 @@ export const developmentTeam = [
     name: "Jan Frenking",
     position: {
       de: "Senior Projektentwicklungsmanager",
-      en: "Senior Project Development Manager"
+      en: "Senior Project Development Manager",
+      es: "Gerente Senior de Desarrollo de Proyectos"
     },
     tags: ["Senior"],
     email: "j.frenking@gc.dev",
@@ -107,7 +132,8 @@ export const developmentTeam = [
     name: "Nils Wellstein",
     position: {
       de: "GIS & Projektentwicklungsmanager",
-      en: "GIS & Project Development Manager"
+      en: "GIS & Project Development Manager",
+      es: "Gerente de GIS y Desarrollo de Proyectos"
     },
     tags: ["GIS"],
     email: "n.wellstein@gc.dev",
@@ -117,7 +143,8 @@ export const developmentTeam = [
     name: "Tim Wagner",
     position: {
       de: "Senior Projektentwicklungsmanager",
-      en: "Senior Project Development Manager"
+      en: "Senior Project Development Manager",
+      es: "Gerente Senior de Desarrollo de Proyectos"
     },
     tags: ["Senior"],
     email: "t.wagner@gc.dev",
@@ -127,7 +154,8 @@ export const developmentTeam = [
     name: "Jürgen Tiemann",
     position: {
       de: "Flächenakquise & Entwicklungsmanager",
-      en: "Land Acquisition & Development Manager"
+      en: "Land Acquisition & Development Manager",
+      es: "Gerente de Adquisición de Terrenos y Desarrollo"
     },
     tags: ["Land"],
     email: "j.tiemann@gc.dev",
