@@ -1,0 +1,18 @@
+
+{
+  "version": 2,
+  "framework": "nextjs",
+  "buildCommand": "cd app && yarn install --frozen-lockfile && yarn build",
+  "outputDirectory": "app/.next",
+  "installCommand": "cd app && yarn install --frozen-lockfile",
+  "devCommand": "cd app && yarn dev",
+  "env": {
+    "NEXT_PUBLIC_APP_URL": "https://gc-development-group.vercel.app"
+  },
+  "rewrites": [
+    {
+      "source": "/((?!api/).*)",
+      "destination": "/app/$1"
+    }
+  ]
+}
