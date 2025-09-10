@@ -1,11 +1,11 @@
 {
   "installCommand": "npm install",
   "buildCommand": "npm run build",
+  "regions": ["fra1"],
   "functions": {
     "app/api/contact/route.ts": {
       "maxDuration": 10,
-      "runtime": "nodejs20.x",
-      "regions": ["fra1"]
+      "runtime": "nodejs20.x"
     }
   }
 }
