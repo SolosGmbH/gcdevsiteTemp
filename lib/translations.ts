@@ -120,7 +120,7 @@ export const translations = {
       }
     },
     footer: {
-      copyright: "© 2024 GC Development Group. Alle Rechte vorbehalten.",
+      copyright: "© 2025 GC Development Group. Alle Rechte vorbehalten.",
       legal: "Rechtlicher Hinweis",
       legalText: "Der Inhalt dieses Dokuments ist vertraulich und nicht zur Weitergabe bestimmt."
     }
@@ -245,7 +245,7 @@ export const translations = {
       }
     },
     footer: {
-      copyright: "© 2024 GC Development Group. All rights reserved.",
+      copyright: "© 2025 GC Development Group. All rights reserved.",
       legal: "Legal Notice",
       legalText: "The content of this document is confidential and not intended for distribution."
     }

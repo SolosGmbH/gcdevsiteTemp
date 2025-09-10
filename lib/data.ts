@@ -55,25 +55,25 @@ export const developmentTeam = [
   {
     name: "Jan Frenking",
     position: "Senior Project Development Manager",
-    email: "j.frenking@greencells.com",
+    email: "j.frenking@gc.dev",
     phone: "+49 151 551 404 51"
   },
   {
-    name: "Nils Wellstein", 
+    name: "Nils Wellstein",
     position: "GIS & Project Development Manager",
-    email: "n.wellstein@greencells.com",
-    phone: "+49 681 992 669 10"
+    email: "n.wellstein@gc.dev",
+    phone: "+49 681 933 566 77"
   },
   {
     name: "Tim Wagner",
-    position: "Senior Project Development Manager", 
-    email: "t.wagner@greencells.com",
+    position: "Senior Project Development Manager",
+    email: "t.wagner@gc.dev",
     phone: "+49 173 721 38 19"
   },
   {
     name: "Jürgen Tiemann",
     position: "Land Acquisition & Development Manager",
-    email: "j.tiemann@greencells.com",
+    email: "j.tiemann@gc.dev",
     phone: "+49 162 648 37 80"
   }
 ];
@@ -111,12 +111,12 @@ export const projects = {
 };
 
 export const companyInfo = {
-  name: "Greencells GmbH",
+  name: "GC Development Group",
   address: "Bahnhofstraße 28",
   postalCode: "66111",
   city: "Saarbrücken",
   country: "Germany",
-  phone: "+49 681 992 669 10",
-  fax: "+49 681 938 665 74", 
+  phone: "+49 681 933 566 77",
+  fax: "+49 681 938 665 74",
   website: "www.greencells.com"
 };

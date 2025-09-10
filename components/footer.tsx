@@ -24,7 +24,7 @@ export function Footer() {
           <div>
             <div className="flex items-center mb-4">
               <Sun className="h-8 w-8 text-green-500 mr-2" />
-              <span className="font-bold text-xl">Greencells</span>
+              <span className="font-bold text-xl">GC Development Group</span>
             </div>
             <p className="text-gray-300 mb-4 leading-relaxed">
               {t.hero.tagline}
@@ -43,7 +43,7 @@ export function Footer() {
               </div>
               <div className="flex items-center gap-2">
                 <Mail className="h-4 w-4" />
-                <span>info@greencells.com</span>
+                <span>info@gc.dev</span>
               </div>
             </div>
           </div>
