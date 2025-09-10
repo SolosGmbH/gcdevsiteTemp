@@ -9,10 +9,7 @@ const nextConfig = {
   images: { 
     unoptimized: true 
   },
-  output: 'standalone',
-  experimental: {
-    serverComponentsExternalPackages: ['@prisma/client', 'prisma']
-  }
+  serverExternalPackages: ['@prisma/client', 'prisma']
 };
 
 module.exports = nextConfig;
