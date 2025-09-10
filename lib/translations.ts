@@ -115,7 +115,6 @@ export const translations = {
       info: {
         address: "Adresse",
         phone: "Telefon",
-        fax: "Fax",
         web: "Website"
       }
     },
@@ -240,7 +239,6 @@ export const translations = {
       info: {
         address: "Address",
         phone: "Phone",
-        fax: "Fax", 
         web: "Website"
       }
     },

@@ -117,6 +117,5 @@ export const companyInfo = {
   city: "Saarbrücken",
   country: "Germany",
   phone: "+49 681 933 566 77",
-  fax: "+49 681 938 665 74",
-  website: "www.greencells.com"
+  website: "www.gc.dev"
 };
