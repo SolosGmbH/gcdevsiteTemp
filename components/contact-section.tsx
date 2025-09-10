@@ -1,4 +1,3 @@
-
 'use client';
 
 import React, { useState } from 'react';
@@ -15,7 +14,8 @@ import {
   Globe,
   CheckCircle,
   AlertCircle,
-  Send
+  Send,
+  Building
 } from 'lucide-react';
 import { toast } from 'sonner';
 
@@ -47,7 +47,7 @@ export function ContactSection() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-
+    
     if (!formData.name || !formData.email || !formData.message) {
       toast.error(t.contact.form.error);
       return;
@@ -69,13 +69,13 @@ ${t.contact.form.emailTemplate.signature}`;
 
     // URL-encode die Parameter
     const mailtoLink = `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-
+    
     // Öffne den Standard-E-Mail-Client
     window.location.href = mailtoLink;
-
+    
     // Zeige Erfolgs-Toast
     toast.success(t.contact.form.success);
-
+    
     // Formular zurücksetzen
     setFormData({
       name: '',
@@ -298,6 +298,8 @@ ${t.contact.form.emailTemplate.signature}`;
                   ))}
                 </div>
               </CardContent>
+            </Card>
+
             {/* Response Time Info */}
             <Card className="p-6 bg-gradient-to-r from-green-50 to-blue-50">
               <CardContent className="p-0">
