@@ -1,29 +1,29 @@
 {
   "pages": {
     "/_not-found/page": [
-      "static/chunks/webpack-df9508188de4c63c.js",
-      "static/chunks/fd9d1056-ad15f396ddf9b7e5.js",
-      "static/chunks/117-4e91b85cb0a8a434.js",
-      "static/chunks/main-app-d4bc49f17c50c64a.js",
-      "static/chunks/app/_not-found/page-029cdbf7bfc0521c.js"
+      "static/chunks/webpack-7fa8c10b4e206502.js",
+      "static/chunks/4bd1b696-c023c6e3521b1417.js",
+      "static/chunks/255-e3bf15caf1f1e0f9.js",
+      "static/chunks/main-app-949235745a23afa4.js",
+      "static/chunks/app/_not-found/page-0dfb4977f8f023c5.js"
     ],
     "/layout": [
-      "static/chunks/webpack-df9508188de4c63c.js",
-      "static/chunks/fd9d1056-ad15f396ddf9b7e5.js",
-      "static/chunks/117-4e91b85cb0a8a434.js",
-      "static/chunks/main-app-d4bc49f17c50c64a.js",
-      "static/css/6defc57e5edade00.css",
-      "static/chunks/438-d3578765ecebaac1.js",
-      "static/chunks/app/layout-3f9ed7930eabc1d2.js"
+      "static/chunks/webpack-7fa8c10b4e206502.js",
+      "static/chunks/4bd1b696-c023c6e3521b1417.js",
+      "static/chunks/255-e3bf15caf1f1e0f9.js",
+      "static/chunks/main-app-949235745a23afa4.js",
+      "static/css/9f6e81a7a7733584.css",
+      "static/chunks/720-8d5292a2a76a19bb.js",
+      "static/chunks/app/layout-780b6fde827de5ec.js"
     ],
     "/page": [
-      "static/chunks/webpack-df9508188de4c63c.js",
-      "static/chunks/fd9d1056-ad15f396ddf9b7e5.js",
-      "static/chunks/117-4e91b85cb0a8a434.js",
-      "static/chunks/main-app-d4bc49f17c50c64a.js",
-      "static/chunks/438-d3578765ecebaac1.js",
-      "static/chunks/261-1a4e424fed6ac34f.js",
-      "static/chunks/app/page-96e0f60d0fbacaf9.js"
+      "static/chunks/webpack-7fa8c10b4e206502.js",
+      "static/chunks/4bd1b696-c023c6e3521b1417.js",
+      "static/chunks/255-e3bf15caf1f1e0f9.js",
+      "static/chunks/main-app-949235745a23afa4.js",
+      "static/chunks/720-8d5292a2a76a19bb.js",
+      "static/chunks/771-d307f4a5c1a42c59.js",
+      "static/chunks/app/page-3f13c690251ecbef.js"
     ]
   }
 }
