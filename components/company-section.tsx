@@ -262,7 +262,7 @@ export function CompanySection() {
                         {member.name}
                       </h4>
                       <p className="text-green-600 font-semibold">
-                        {member.position}
+                        {typeof member.position === 'string' ? member.position : (member.position[language] ?? member.position.de)}
                       </p>
                     </div>
                     <ul className="space-y-2">

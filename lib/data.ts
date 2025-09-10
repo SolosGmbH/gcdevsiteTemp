@@ -14,7 +14,10 @@ export const companyStats = {
 export const managementTeam = [
   {
     name: "Andreas Hoffmann",
-    position: "Chief Executive Officer",
+    position: {
+      de: "Geschäftsführer (CEO)",
+      en: "Chief Executive Officer"
+    },
     description: {
       de: [
         "Gründer und geschäftsführender Gesellschafter",
@@ -30,7 +33,10 @@ export const managementTeam = [
   },
   {
     name: "Pablo Cárdenas",
-    position: "Chief Development Officer",
+    position: {
+      de: "Leiter Entwicklung (CDO)",
+      en: "Chief Development Officer"
+    },
     description: {
       de: [
         "Mit Greencells seit 2019",
@@ -48,7 +54,10 @@ export const managementTeam = [
   },
   {
     name: "Jonas Wilhelmi",
-    position: "Head of Finance",
+    position: {
+      de: "Leiter Finanzen",
+      en: "Head of Finance"
+    },
     description: {
       de: [
         "Mit Greencells seit 2020",
@@ -64,7 +73,10 @@ export const managementTeam = [
   },
   {
     name: "Darina Decheva",
-    position: "Head of Investment Management",
+    position: {
+      de: "Leiterin Investment Management",
+      en: "Head of Investment Management"
+    },
     description: {
       de: [
         "Mit Greencells seit 2019",
@@ -83,25 +95,41 @@ export const managementTeam = [
 export const developmentTeam = [
   {
     name: "Jan Frenking",
-    position: "Senior Project Development Manager",
+    position: {
+      de: "Senior Projektentwicklungsmanager",
+      en: "Senior Project Development Manager"
+    },
+    tags: ["Senior"],
     email: "j.frenking@gc.dev",
     phone: "+49 681 933 566 77"
   },
   {
     name: "Nils Wellstein",
-    position: "GIS & Project Development Manager",
+    position: {
+      de: "GIS & Projektentwicklungsmanager",
+      en: "GIS & Project Development Manager"
+    },
+    tags: ["GIS"],
     email: "n.wellstein@gc.dev",
     phone: "+49 681 933 566 77"
   },
   {
     name: "Tim Wagner",
-    position: "Senior Project Development Manager",
+    position: {
+      de: "Senior Projektentwicklungsmanager",
+      en: "Senior Project Development Manager"
+    },
+    tags: ["Senior"],
     email: "t.wagner@gc.dev",
     phone: "+49 681 933 566 77"
   },
   {
     name: "Jürgen Tiemann",
-    position: "Land Acquisition & Development Manager",
+    position: {
+      de: "Flächenakquise & Entwicklungsmanager",
+      en: "Land Acquisition & Development Manager"
+    },
+    tags: ["Land"],
     email: "j.tiemann@gc.dev",
     phone: "+49 681 933 566 77"
   }

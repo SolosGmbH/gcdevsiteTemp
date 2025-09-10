@@ -17,7 +17,7 @@ import {
 } from 'lucide-react';
 
 export function TeamSection() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
 
   return (
     <section id="team" className="py-20 bg-gray-50">
@@ -74,109 +74,118 @@ export function TeamSection() {
 
         {/* Team Members */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {developmentTeam.map((member) => (
-            <motion.div
-              key={member.email}
-              initial={{ opacity: 0, y: 30, scale: 0.95 }}
-              whileInView={{ opacity: 1, y: 0, scale: 1 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              whileHover={{ y: -5, transition: { duration: 0.2 } }}
-            >
-              <Card className="p-6 hover:shadow-xl transition-all duration-300 border-l-4 border-l-green-500 h-full">
-                <CardContent className="p-0">
-                  {/* Member Header */}
-                  <div className="flex items-start gap-4 mb-6">
-                    <div className="w-16 h-16 bg-gradient-to-br from-green-100 to-blue-100 rounded-full flex items-center justify-center">
-                      <User className="h-8 w-8 text-green-600" />
-                    </div>
-                    <div className="flex-1">
-                      <h4 className="text-xl font-bold text-gray-900 mb-1">
-                        {member.name}
-                      </h4>
-                      <p className="text-green-600 font-semibold mb-2 flex items-center gap-2">
-                        <Briefcase className="h-4 w-4" />
-                        {member.position}
-                      </p>
-                    </div>
-                  </div>
+          {developmentTeam.map((member) => {
+            // Localize the position string and normalize tags safely
+            const posStr =
+              typeof member.position === 'string'
+                ? member.position
+                : (member.position && (member.position[language] ?? member.position.de)) ?? '';
+            const tags: string[] = Array.isArray((member as any).tags) ? (member as any).tags : [];
 
-                  {/* Contact Information */}
-                  <div className="space-y-3 mb-6">
-                    <div className="flex items-center gap-3 text-gray-600">
-                      <Mail className="h-4 w-4 text-blue-600" />
-                      <a
-                        href={`mailto:${member.email}`}
-                        className="hover:text-blue-600 transition-colors"
-                      >
-                        {member.email}
-                      </a>
-                    </div>
-                    <div className="flex items-center gap-3 text-gray-600">
-                      <Phone className="h-4 w-4 text-green-600" />
-                      <a
-                        href={`tel:${member.phone.replace(/\s/g, '')}`}
-                        className="hover:text-green-600 transition-colors"
-                      >
-                        {member.phone}
-                      </a>
-                    </div>
-                  </div>
-
-                  {/* Expertise Areas */}
-                  <div className="mb-6">
-                    <h5 className="font-semibold text-gray-900 mb-3">{t.team.expertise.title}</h5>
-                    <div className="space-y-2">
-                      {member.position.includes('GIS') && (
-                        <div className="flex items-center gap-2">
-                          <MapPin className="h-4 w-4 text-purple-600" />
-                          <span className="text-sm text-gray-600">{t.team.expertise.gisAnalysis}</span>
-                        </div>
-                      )}
-                      {member.position.includes('Senior') && (
-                        <div className="flex items-center gap-2">
-                          <Briefcase className="h-4 w-4 text-blue-600" />
-                          <span className="text-sm text-gray-600">{t.team.expertise.seniorManagement}</span>
-                        </div>
-                      )}
-                      {member.position.includes('Land') && (
-                        <div className="flex items-center gap-2">
-                          <MapPin className="h-4 w-4 text-green-600" />
-                          <span className="text-sm text-gray-600">{t.team.expertise.landAcquisition}</span>
-                        </div>
-                      )}
-                      <div className="flex items-center gap-2">
-                        <Users className="h-4 w-4 text-orange-600" />
-                        <span className="text-sm text-gray-600">{t.team.expertise.stakeholderManagement}</span>
+            return (
+              <motion.div
+                key={member.email}
+                initial={{ opacity: 0, y: 30, scale: 0.95 }}
+                whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+                whileHover={{ y: -5, transition: { duration: 0.2 } }}
+              >
+                <Card className="p-6 hover:shadow-xl transition-all duration-300 border-l-4 border-l-green-500 h-full">
+                  <CardContent className="p-0">
+                    {/* Member Header */}
+                    <div className="flex items-start gap-4 mb-6">
+                      <div className="w-16 h-16 bg-gradient-to-br from-green-100 to-blue-100 rounded-full flex items-center justify-center">
+                        <User className="h-8 w-8 text-green-600" />
+                      </div>
+                      <div className="flex-1">
+                        <h4 className="text-xl font-bold text-gray-900 mb-1">
+                          {member.name}
+                        </h4>
+                        <p className="text-green-600 font-semibold mb-2 flex items-center gap-2">
+                          <Briefcase className="h-4 w-4" />
+                          {posStr}
+                        </p>
                       </div>
                     </div>
-                  </div>
 
-                  {/* Contact Button */}
-                  <div className="flex gap-3">
-                    <Button
-                      variant="outline"
-                      size="sm"
-                      onClick={() => window.location.href = `mailto:${member.email}`}
-                      className="flex-1"
-                    >
-                      <Mail className="h-4 w-4 mr-2" />
-                      E-Mail
-                    </Button>
-                    <Button
-                      variant="outline"
-                      size="sm"
-                      onClick={() => window.location.href = `tel:${member.phone.replace(/\s/g, '')}`}
-                      className="flex-1"
-                    >
-                      <Phone className="h-4 w-4 mr-2" />
-                      Anruf
-                    </Button>
-                  </div>
-                </CardContent>
-              </Card>
-            </motion.div>
-          ))}
+                    {/* Contact Information */}
+                    <div className="space-y-3 mb-6">
+                      <div className="flex items-center gap-3 text-gray-600">
+                        <Mail className="h-4 w-4 text-blue-600" />
+                        <a
+                          href={`mailto:${member.email}`}
+                          className="hover:text-blue-600 transition-colors"
+                        >
+                          {member.email}
+                        </a>
+                      </div>
+                      <div className="flex items-center gap-3 text-gray-600">
+                        <Phone className="h-4 w-4 text-green-600" />
+                        <a
+                          href={`tel:${member.phone.replace(/\s/g, '')}`}
+                          className="hover:text-green-600 transition-colors"
+                        >
+                          {member.phone}
+                        </a>
+                      </div>
+                    </div>
+
+                    {/* Expertise Areas */}
+                    <div className="mb-6">
+                      <h5 className="font-semibold text-gray-900 mb-3">{t.team.expertise.title}</h5>
+                      <div className="space-y-2">
+                        {(posStr?.includes?.('GIS') || tags.includes('GIS')) && (
+                          <div className="flex items-center gap-2">
+                            <MapPin className="h-4 w-4 text-purple-600" />
+                            <span className="text-sm text-gray-600">{t.team.expertise.gisAnalysis}</span>
+                          </div>
+                        )}
+                        {(posStr?.includes?.('Senior') || tags.includes('Senior')) && (
+                          <div className="flex items-center gap-2">
+                            <Briefcase className="h-4 w-4 text-blue-600" />
+                            <span className="text-sm text-gray-600">{t.team.expertise.seniorManagement}</span>
+                          </div>
+                        )}
+                        {(posStr?.includes?.('Land') || tags.includes('Land')) && (
+                          <div className="flex items-center gap-2">
+                            <MapPin className="h-4 w-4 text-green-600" />
+                            <span className="text-sm text-gray-600">{t.team.expertise.landAcquisition}</span>
+                          </div>
+                        )}
+                        <div className="flex items-center gap-2">
+                          <Users className="h-4 w-4 text-orange-600" />
+                          <span className="text-sm text-gray-600">{t.team.expertise.stakeholderManagement}</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Contact Button */}
+                    <div className="flex gap-3">
+                      <Button
+                        variant="outline"
+                        size="sm"
+                        onClick={() => window.location.href = `mailto:${member.email}`}
+                        className="flex-1"
+                      >
+                        <Mail className="h-4 w-4 mr-2" />
+                        E-Mail
+                      </Button>
+                      <Button
+                        variant="outline"
+                        size="sm"
+                        onClick={() => window.location.href = `tel:${member.phone.replace(/\s/g, '')}`}
+                        className="flex-1"
+                      >
+                        <Phone className="h-4 w-4 mr-2" />
+                        Anruf
+                      </Button>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            );
+          })}
         </div>
 
         {/* Team Contact CTA */}

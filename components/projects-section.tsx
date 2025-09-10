@@ -89,8 +89,8 @@ export function ProjectsSection() {
       className="bg-gradient-to-r from-green-50 to-blue-50 rounded-2xl p-8 mb-12"
     >
       <div className="text-center mb-8">
-        <h3 className="text-2xl font-bold text-gray-900 mb-4">Featured Project: Hartungshof</h3>
-        <p className="text-gray-600">Unser neuestes Vorzeigeprojekt im Saarland</p>
+        <h3 className="text-2xl font-bold text-gray-900 mb-4">{t.projects.featured.title}</h3>
+        <p className="text-gray-600">{t.projects.featured.subtitle}</p>
       </div>
 
       <div className="max-w-4xl mx-auto">
@@ -217,8 +217,8 @@ export function ProjectsSection() {
               </motion.div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {projects.germany.map((project, index) => (
-                  <ProjectCard key={`${project.name}-${project.capacity}-${project.gridConnection}`} project={project} index={index} />
+                {projects.germany.map((project) => (
+                  <ProjectCard key={`${project.name}-${project.capacity}-${project.gridConnection}`} project={project} />
                 ))}
               </div>
             </TabsContent>
@@ -260,8 +260,8 @@ export function ProjectsSection() {
               </motion.div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {projects.saarland.map((project, index) => (
-                  <ProjectCard key={`${project.name}-${project.capacity}-${project.gridConnection}`} project={project} index={index} />
+                {projects.saarland.map((project) => (
+                  <ProjectCard key={`${project.name}-${project.capacity}-${project.gridConnection}`} project={project} />
                 ))}
               </div>
             </TabsContent>

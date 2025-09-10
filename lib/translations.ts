@@ -97,6 +97,8 @@ export const translations = {
       overviewSaarland: "Saarland Projekte Übersicht",
       federalStates: "Bundesländer",
       featured: {
+        title: "Featured Project: Hartungshof",
+        subtitle: "Unser neuestes Vorzeigeprojekt im Saarland",
         estimatedProduction: "Geschätzte jährliche Produktion",
         householdsSupplied: "Versorgt ca. 7.000 Haushalte"
       },
@@ -289,6 +291,8 @@ export const translations = {
       overviewSaarland: "Saarland Projects Overview",
       federalStates: "Federal States",
       featured: {
+        title: "Featured Project: Hartungshof",
+        subtitle: "Our latest flagship project in Saarland",
         estimatedProduction: "Estimated annual production",
         householdsSupplied: "Supplies approx. 7,000 households"
       },
