@@ -7,10 +7,10 @@ import { developmentTeam } from '@/lib/data';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { motion } from 'framer-motion';
-import { 
-  Mail, 
-  Phone, 
-  User, 
+import {
+  Mail,
+  Phone,
+  User,
   MapPin,
   Briefcase,
   Users
@@ -74,12 +74,12 @@ export function TeamSection() {
 
         {/* Team Members */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {developmentTeam.map((member, index) => (
+          {developmentTeam.map((member) => (
             <motion.div
-              key={index}
+              key={member.email}
               initial={{ opacity: 0, y: 30, scale: 0.95 }}
               whileInView={{ opacity: 1, y: 0, scale: 1 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
+              transition={{ duration: 0.6 }}
               viewport={{ once: true }}
               whileHover={{ y: -5, transition: { duration: 0.2 } }}
             >
@@ -105,7 +105,7 @@ export function TeamSection() {
                   <div className="space-y-3 mb-6">
                     <div className="flex items-center gap-3 text-gray-600">
                       <Mail className="h-4 w-4 text-blue-600" />
-                      <a 
+                      <a
                         href={`mailto:${member.email}`}
                         className="hover:text-blue-600 transition-colors"
                       >
@@ -114,7 +114,7 @@ export function TeamSection() {
                     </div>
                     <div className="flex items-center gap-3 text-gray-600">
                       <Phone className="h-4 w-4 text-green-600" />
-                      <a 
+                      <a
                         href={`tel:${member.phone.replace(/\s/g, '')}`}
                         className="hover:text-green-600 transition-colors"
                       >
@@ -190,11 +190,10 @@ export function TeamSection() {
           <Card className="p-8 bg-white shadow-lg">
             <CardContent className="p-0">
               <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                Sprechen Sie direkt mit unserem Team
+                {t.team.cta.title}
               </h3>
               <p className="text-lg text-gray-600 mb-6">
-                Für spezifische Fragen zu Ihrem Projekt können Sie unsere Experten 
-                direkt kontaktieren oder das allgemeine Kontaktformular nutzen.
+                {t.team.cta.description}
               </p>
               <Button
                 size="lg"
@@ -204,7 +203,7 @@ export function TeamSection() {
                 }}
                 className="bg-green-600 hover:bg-green-700"
               >
-                Allgemeines Kontaktformular
+                {t.team.cta.button}
                 <Mail className="ml-2 h-4 w-4" />
               </Button>
             </CardContent>

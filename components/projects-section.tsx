@@ -9,14 +9,16 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { motion } from 'framer-motion';
-import { 
-  MapPin, 
-  Zap, 
-  Calendar, 
-  Building, 
+import {
+  MapPin,
+  Zap,
+  Calendar,
+  Building,
   TrendingUp,
   ExternalLink
 } from 'lucide-react';
+
+/* eslint-disable react/no-unstable-nested-components */
 
 export function ProjectsSection() {
   const { t } = useLanguage();
@@ -29,11 +31,11 @@ export function ProjectsSection() {
     }, 0).toFixed(1);
   };
 
-  const ProjectCard = ({ project, index }: { project: any; index: number }) => (
+  const ProjectCard = ({ project }: { project: any }) => (
     <motion.div
       initial={{ opacity: 0, y: 30, scale: 0.95 }}
       whileInView={{ opacity: 1, y: 0, scale: 1 }}
-      transition={{ duration: 0.5, delay: index * 0.05 }}
+      transition={{ duration: 0.5 }}
       viewport={{ once: true }}
       whileHover={{ y: -5, transition: { duration: 0.2 } }}
     >
@@ -90,7 +92,7 @@ export function ProjectsSection() {
         <h3 className="text-2xl font-bold text-gray-900 mb-4">Featured Project: Hartungshof</h3>
         <p className="text-gray-600">Unser neuestes Vorzeigeprojekt im Saarland</p>
       </div>
-      
+
       <div className="max-w-4xl mx-auto">
         <Card className="p-8 border-2 border-green-200 shadow-lg">
           <CardContent className="p-0">
@@ -119,9 +121,9 @@ export function ProjectsSection() {
               <div className="text-center">
                 <div className="bg-white rounded-xl p-6 shadow-md">
                   <TrendingUp className="h-12 w-12 text-green-600 mx-auto mb-4" />
-                  <p className="text-sm text-gray-600 mb-2">Geschätzte jährliche Produktion</p>
+                  <p className="text-sm text-gray-600 mb-2">{t.projects.featured.estimatedProduction}</p>
                   <p className="text-2xl font-bold text-green-600">~25 GWh</p>
-                  <p className="text-xs text-gray-500 mt-2">Versorgt ca. 7.000 Haushalte</p>
+                  <p className="text-xs text-gray-500 mt-2">{t.projects.featured.householdsSupplied}</p>
                 </div>
               </div>
             </div>
@@ -162,15 +164,15 @@ export function ProjectsSection() {
         >
           <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
             <TabsList className="grid w-full grid-cols-2 mb-8">
-              <TabsTrigger 
-                value="germany" 
+              <TabsTrigger
+                value="germany"
                 className="text-lg"
                 onClick={() => setActiveTab('germany')}
               >
                 {t.projects.germany}
               </TabsTrigger>
-              <TabsTrigger 
-                value="saarland" 
+              <TabsTrigger
+                value="saarland"
                 className="text-lg"
                 onClick={() => setActiveTab('saarland')}
               >
@@ -216,7 +218,7 @@ export function ProjectsSection() {
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {projects.germany.map((project, index) => (
-                  <ProjectCard key={index} project={project} index={index} />
+                  <ProjectCard key={`${project.name}-${project.capacity}-${project.gridConnection}`} project={project} index={index} />
                 ))}
               </div>
             </TabsContent>
@@ -251,7 +253,7 @@ export function ProjectsSection() {
                       <div className="text-3xl font-bold text-purple-600 mb-2">
                         100%
                       </div>
-                      <p className="text-gray-600">Lokale Expertise</p>
+                      <p className="text-gray-600">{t.projects.localExpertise}</p>
                     </div>
                   </div>
                 </div>
@@ -259,7 +261,7 @@ export function ProjectsSection() {
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {projects.saarland.map((project, index) => (
-                  <ProjectCard key={index} project={project} index={index} />
+                  <ProjectCard key={`${project.name}-${project.capacity}-${project.gridConnection}`} project={project} index={index} />
                 ))}
               </div>
             </TabsContent>
@@ -277,10 +279,10 @@ export function ProjectsSection() {
           <Card className="p-8 bg-gradient-to-r from-green-600 to-blue-600 text-white">
             <CardContent className="p-0">
               <h3 className="text-2xl font-bold mb-4">
-                Ihr Projekt könnte das nächste sein
+                {t.projects.cta.title}
               </h3>
               <p className="text-lg mb-6 opacity-90">
-                Lassen Sie uns gemeinsam Ihr PV-Projekt entwickeln und realisieren
+                {t.projects.cta.description}
               </p>
               <Button
                 size="lg"
@@ -291,7 +293,7 @@ export function ProjectsSection() {
                 }}
                 className="bg-white text-green-700 hover:bg-gray-100"
               >
-                Jetzt Projekt besprechen
+                {t.projects.cta.button}
                 <ExternalLink className="ml-2 h-4 w-4" />
               </Button>
             </CardContent>

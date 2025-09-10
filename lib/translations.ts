@@ -2,7 +2,7 @@ export const translations = {
   de: {
     nav: {
       company: "Unternehmen",
-      services: "Dienstleistungen", 
+      services: "Dienstleistungen",
       projects: "Projekte",
       team: "Team",
       contact: "Kontakt"
@@ -16,7 +16,7 @@ export const translations = {
       title: "GC Development Group & die Gruppe",
       subtitle: "Das Unternehmen in Zahlen",
       pipeline: "Entwicklungspipeline",
-      rtbValue: "RTB Wert der Entwicklungspipeline", 
+      rtbValue: "RTB Wert der Entwicklungspipeline",
       employees: "Mitarbeiter",
       employeesDesc: "mit multinationalem Hintergrund, der in 8 verschiedenen Ländern gearbeitet hat",
       focus: "Fokus auf Solar, BESS und Hybrid",
@@ -25,9 +25,10 @@ export const translations = {
       founded2018: "Entwicklungsgeschäft 2018 gegründet",
       founded2009: "2009 in Deutschland als Solar-EPC-Unternehmen gegründet",
       installedCapacity: "Installierte Leistung",
-      realizedProjects: "Realisierte Projekte", 
+      realizedProjects: "Realisierte Projekte",
       co2Savings: "Millionen Tonnen CO₂ Einsparungen",
-      co2Note: "Geschätzte CO₂-Einsparungen von Solarkraftwerken im Vergleich zu Kohlekraftwerken"
+      co2Note: "Geschätzte CO₂-Einsparungen von Solarkraftwerken im Vergleich zu Kohlekraftwerken",
+      energyTransitionTitle: "Greencells' Beitrag zur deutschen Energiewende"
     },
     services: {
       title: "Freiflächenentwicklung",
@@ -38,7 +39,7 @@ export const translations = {
           desc: "Durch die Nutzung Ihrer Freiflächen für PV-Anlagen leisten Sie einen wichtigen Beitrag zum Umweltschutz und zur Reduzierung von Treibhausgasemissionen. Sie können stolz darauf sein, dass Sie einen aktiven Beitrag zur Bekämpfung des Klimawandels leisten."
         },
         stableReturn: {
-          title: "Stabile Rendite", 
+          title: "Stabile Rendite",
           desc: "Die Einspeisung von Strom ins Netz bietet eine langfristige und stabile Rendite für Flächeninhaber und Gemeinde"
         },
         efficientUse: {
@@ -70,13 +71,22 @@ export const translations = {
           "Kooperation mit den Stadtwerken (Stromabnahme, Unterstützung in Operation & Maintenance)",
           "Vorteile der Zusammenfassung von Projektentwicklung und EPC – keine Schnittstellenprobleme, wir wissen was wir tun"
         ]
+      },
+      badges: {
+        tier1Quality: "Tier 1 Qualität",
+        turnkey: "Schlüsselfertig",
+        noImplementationRisk: "Kein Umsetzungsrisiko",
+        epcDev: "EPC + Entwicklung"
+      },
+      process: {
+        title: "Projektentwicklungsphasen"
       }
     },
     projects: {
       title: "Referenzprojekte",
       subtitle: "Unsere erfolgreich realisierten Photovoltaik-Projekte in Deutschland",
       germany: "Deutschland",
-      saarland: "Saarland", 
+      saarland: "Saarland",
       totalCapacity: "Gesamtkapazität",
       capacity: "Kapazität",
       location: "Standort",
@@ -85,7 +95,17 @@ export const translations = {
       projects: "Projekte",
       overviewGermany: "Deutschland Projekte Übersicht",
       overviewSaarland: "Saarland Projekte Übersicht",
-      federalStates: "Bundesländer"
+      federalStates: "Bundesländer",
+      featured: {
+        estimatedProduction: "Geschätzte jährliche Produktion",
+        householdsSupplied: "Versorgt ca. 7.000 Haushalte"
+      },
+      localExpertise: "Lokale Expertise",
+      cta: {
+        title: "Ihr Projekt könnte das nächste sein",
+        description: "Lassen Sie uns gemeinsam Ihr PV-Projekt entwickeln und realisieren",
+        button: "Jetzt Projekt besprechen"
+      }
     },
     team: {
       title: "Development Team Deutschland",
@@ -103,6 +123,11 @@ export const translations = {
         seniorManagement: "Senior Projektmanagement",
         landAcquisition: "Flächenakquise & Entwicklung",
         stakeholderManagement: "Stakeholder Management"
+      },
+      cta: {
+        title: "Sprechen Sie direkt mit unserem Team",
+        description: "Für spezifische Fragen zu Ihrem Projekt können Sie unsere Experten direkt kontaktieren oder das allgemeine Kontaktformular nutzen.",
+        button: "Allgemeines Kontaktformular"
       }
     },
     contact: {
@@ -156,14 +181,21 @@ export const translations = {
     footer: {
       copyright: "© 2025 GC Development Group. Alle Rechte vorbehalten.",
       legal: "Rechtlicher Hinweis",
-      legalText: "Der Inhalt dieses Dokuments ist vertraulich und nicht zur Weitergabe bestimmt."
+      legalText: "Der Inhalt dieses Dokuments ist vertraulich und nicht zur Weitergabe bestimmt.",
+      servicesTitle: "Unsere Services",
+      services: {
+        projectDevelopment: "Projektentwicklung",
+        epcServices: "EPC Services",
+        landAcquisition: "Flächenakquise",
+        financing: "Finanzierung"
+      }
     }
   },
   en: {
     nav: {
       company: "Company",
       services: "Services",
-      projects: "Projects", 
+      projects: "Projects",
       team: "Team",
       contact: "Contact"
     },
@@ -174,10 +206,10 @@ export const translations = {
     },
     company: {
       title: "GC Development Group & the Group",
-      subtitle: "The Company in Numbers", 
+      subtitle: "The Company in Numbers",
       pipeline: "Development Pipeline",
       rtbValue: "RTB Value of Development Pipeline",
-      employees: "Employees", 
+      employees: "Employees",
       employeesDesc: "with multinational background, having worked in 8 different countries",
       focus: "Focus on Solar, BESS and Hybrid",
       projects: "Projects",
@@ -186,8 +218,9 @@ export const translations = {
       founded2009: "Founded 2009 in Germany as Solar EPC Company",
       installedCapacity: "Installed Capacity",
       realizedProjects: "Realized Projects",
-      co2Savings: "Million Tons CO₂ Savings", 
-      co2Note: "Estimated CO₂ savings from solar power plants compared to coal power plants"
+      co2Savings: "Million Tons CO₂ Savings",
+      co2Note: "Estimated CO₂ savings from solar power plants compared to coal power plants",
+      energyTransitionTitle: "Greencells' contribution to Germany's energy transition"
     },
     services: {
       title: "Open Space Development",
@@ -206,7 +239,7 @@ export const translations = {
           desc: "Perhaps you have open spaces that are currently unused or only lightly used. By using these areas for PV systems, you can use your land efficiently and, together with the community, benefit from unused areas."
         },
         positioning: {
-          title: "Positioning as a Pioneer", 
+          title: "Positioning as a Pioneer",
           desc: "By using renewable energy, you and the community can position yourselves as pioneers in environmental protection and sustainability. This can have a positive impact on your image, bring you positive PR and help the community be perceived as an attractive location."
         },
         noInvestment: {
@@ -226,10 +259,19 @@ export const translations = {
           "Unlimited financing capability",
           "Integration strategy regarding landscape image",
           "Experience in implementing local acceptance strategies (information events, explanations, integration of tours into school events, local business events)",
-          "Experience in implementing local participation models, if desired", 
+          "Experience in implementing local participation models, if desired",
           "Cooperation with municipal utilities (electricity purchase, support in operation & maintenance)",
           "Advantages of combining project development and EPC – no interface problems, we know what we do"
         ]
+      },
+      badges: {
+        tier1Quality: "Tier 1 Quality",
+        turnkey: "Turnkey",
+        noImplementationRisk: "No implementation risk",
+        epcDev: "EPC + Development"
+      },
+      process: {
+        title: "Project Development Phases"
       }
     },
     projects: {
@@ -237,7 +279,7 @@ export const translations = {
       subtitle: "Our successfully realized photovoltaic projects in Germany",
       germany: "Germany",
       saarland: "Saarland",
-      totalCapacity: "Total Capacity", 
+      totalCapacity: "Total Capacity",
       capacity: "Capacity",
       location: "Location",
       gridConnection: "Grid Connection",
@@ -245,7 +287,17 @@ export const translations = {
       projects: "Projects",
       overviewGermany: "Germany Projects Overview",
       overviewSaarland: "Saarland Projects Overview",
-      federalStates: "Federal States"
+      federalStates: "Federal States",
+      featured: {
+        estimatedProduction: "Estimated annual production",
+        householdsSupplied: "Supplies approx. 7,000 households"
+      },
+      localExpertise: "Local Expertise",
+      cta: {
+        title: "Your project could be next",
+        description: "Let's develop and realize your PV project together",
+        button: "Discuss project now"
+      }
     },
     team: {
       title: "Development Team Germany",
@@ -263,6 +315,11 @@ export const translations = {
         seniorManagement: "Senior Project Management",
         landAcquisition: "Land Acquisition & Development",
         stakeholderManagement: "Stakeholder Management"
+      },
+      cta: {
+        title: "Speak directly with our team",
+        description: "For specific questions about your project, you can contact our experts directly or use the general contact form.",
+        button: "General contact form"
       }
     },
     contact: {
@@ -316,7 +373,14 @@ export const translations = {
     footer: {
       copyright: "© 2025 GC Development Group. All rights reserved.",
       legal: "Legal Notice",
-      legalText: "The content of this document is confidential and not intended for distribution."
+      legalText: "The content of this document is confidential and not intended for distribution.",
+      servicesTitle: "Our Services",
+      services: {
+        projectDevelopment: "Project Development",
+        epcServices: "EPC Services",
+        landAcquisition: "Land Acquisition",
+        financing: "Financing"
+      }
     }
   }
 } as const;

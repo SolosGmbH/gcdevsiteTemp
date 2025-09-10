@@ -8,25 +8,24 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { 
-  Building, 
-  Users, 
-  Target, 
-  Folder, 
-  Zap, 
+import {
+  Building,
+  Users,
+  Target,
+  Folder,
+  Zap,
   Award,
   TrendingUp,
   Leaf
 } from 'lucide-react';
 
-function AnimatedCounter({ value, suffix = '', duration = 2000 }: { value: string, suffix?: string, duration?: number }) {
+function AnimatedCounter({ value, suffix = '', duration = 2000 }: Readonly<{ value: string; suffix?: string; duration?: number }>) {
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.5 });
   const [displayValue, setDisplayValue] = React.useState('0');
 
   React.useEffect(() => {
     if (!inView) return;
 
-    // Extract numeric value
     const numericValue = parseFloat(value.replace(/[^\d.]/g, ''));
     if (isNaN(numericValue)) {
       setDisplayValue(value);
@@ -37,15 +36,18 @@ function AnimatedCounter({ value, suffix = '', duration = 2000 }: { value: strin
     const animate = (currentTime: number) => {
       if (!startTime) startTime = currentTime;
       const progress = Math.min((currentTime - startTime) / duration, 1);
-      
+
       const currentValue = Math.floor(numericValue * progress);
-      const displayText = value.includes('GW') 
-        ? `${(currentValue / 10).toFixed(1)} GW`
-        : value.includes('€') 
-        ? `~€${currentValue} MILLIONEN`
-        : value.includes(',')
-        ? currentValue.toFixed(1)
-        : currentValue.toString();
+      let displayText: string;
+      if (value.includes('GW')) {
+        displayText = `${(currentValue / 10).toFixed(1)} GW`;
+      } else if (value.includes('€')) {
+        displayText = `~€${currentValue} MILLIONEN`;
+      } else if (value.includes(',')) {
+        displayText = currentValue.toFixed(1);
+      } else {
+        displayText = currentValue.toString();
+      }
 
       setDisplayValue(displayText);
 
@@ -63,7 +65,7 @@ function AnimatedCounter({ value, suffix = '', duration = 2000 }: { value: strin
 }
 
 export function CompanySection() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
 
   const stats = [
     {
@@ -157,12 +159,12 @@ export function CompanySection() {
           viewport={{ once: true }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"
         >
-          {stats.map((stat, index) => (
+          {stats.map((stat) => (
             <motion.div
-              key={index}
+              key={stat.label}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
+              transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
               <Card className="p-6 hover:shadow-lg transition-shadow duration-300 border-l-4 border-l-green-500">
@@ -197,7 +199,7 @@ export function CompanySection() {
         >
           <div className="text-center mb-8">
             <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
-              Greencells' Beitrag zur deutschen Energiewende
+              {t.company.energyTransitionTitle}
             </h3>
             <div className="flex justify-center gap-2 mb-4">
               <Badge variant="secondary" className="bg-green-100 text-green-800">
@@ -210,12 +212,12 @@ export function CompanySection() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {germanStats.map((stat, index) => (
+            {germanStats.map((stat) => (
               <motion.div
-                key={index}
+                key={stat.label}
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: index * 0.2 }}
+                transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
                 className="text-center"
               >
@@ -245,12 +247,12 @@ export function CompanySection() {
             {t.team.management}
           </h3>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {managementTeam.map((member, index) => (
+            {managementTeam.map((member) => (
               <motion.div
-                key={index}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
+                key={member.name}
+                initial={{ opacity: 0, x:  -30 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
               >
                 <Card className="p-6 hover:shadow-lg transition-shadow duration-300">
@@ -264,8 +266,8 @@ export function CompanySection() {
                       </p>
                     </div>
                     <ul className="space-y-2">
-                      {member.description.map((desc, descIndex) => (
-                        <li key={descIndex} className="flex items-start gap-2 text-gray-600">
+                      {(member.description[language] || member.description['de']).map((desc: string) => (
+                        <li key={desc} className="flex items-start gap-2 text-gray-600">
                           <span className="w-2 h-2 bg-green-500 rounded-full mt-2 flex-shrink-0"></span>
                           <span>{desc}</span>
                         </li>

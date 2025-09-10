@@ -15,39 +15,68 @@ export const managementTeam = [
   {
     name: "Andreas Hoffmann",
     position: "Chief Executive Officer",
-    description: [
-      "Gründer und geschäftsführender Gesellschafter",
-      "Signifikante Weiterentwicklung der Unternehmensstrategie, um eines der ersten EPC-Unternehmen der zweiten Generation zu werden",
-      "Unternehmer und Gründer mit Aktivitäten in den Bereichen erneuerbare Energien, Kommunikation, Event- und Freizeitindustrie"
-    ]
+    description: {
+      de: [
+        "Gründer und geschäftsführender Gesellschafter",
+        "Signifikante Weiterentwicklung der Unternehmensstrategie, um eines der ersten EPC-Unternehmen der zweiten Generation zu werden",
+        "Unternehmer und Gründer mit Aktivitäten in den Bereichen erneuerbare Energien, Kommunikation, Event- und Freizeitindustrie"
+      ],
+      en: [
+        "Founder and Managing Partner",
+        "Significant advancement of the company strategy to become one of the first second-generation EPC companies",
+        "Entrepreneur and founder active in renewable energy, communications, event and leisure industries"
+      ]
+    }
   },
   {
-    name: "Pablo Cárdenas", 
+    name: "Pablo Cárdenas",
     position: "Chief Development Officer",
-    description: [
-      "Mit Greencells seit 2019",
-      "Mehr als 14 Jahre in der Solarindustrie in Europa, Südamerika und der Karibik",
-      "Umfassende Expertise in der gesamten Wertschöpfungskette der Photovoltaik, von der Standorterschließung bis hin zu den Betriebsanlagen",
-      "Definition wichtiger Schlüsselentwicklungsprozesse, die den weiteren Ausbau der Entwicklungspipeline auf täglicher Basis unterstützen"
-    ]
+    description: {
+      de: [
+        "Mit Greencells seit 2019",
+        "Mehr als 14 Jahre in der Solarindustrie in Europa, Südamerika und der Karibik",
+        "Umfassende Expertise in der gesamten Wertschöpfungskette der Photovoltaik, von der Standorterschließung bis hin zu den Betriebsanlagen",
+        "Definition wichtiger Schlüsselentwicklungsprozesse, die den weiteren Ausbau der Entwicklungspipeline auf täglicher Basis unterstützen"
+      ],
+      en: [
+        "With Greencells since 2019",
+        "Over 14 years in the solar industry across Europe, South America and the Caribbean",
+        "Comprehensive expertise across the entire PV value chain, from site origination to operating assets",
+        "Defined key development processes that support the daily expansion of the development pipeline"
+      ]
+    }
   },
   {
     name: "Jonas Wilhelmi",
-    position: "Head of Finance", 
-    description: [
-      "Mit Greencells seit 2020",
-      "Strategischer Marktführer im Bereich erneuerbare Energien, spezialisiert auf Photovoltaik, mit fundiertem Finanzwissen in der schlüsselfertigen EPC- und PV-Projektentwicklung",
-      "Leitet die Finanzstrategie und -kontrolle, optimiert Ressourcen, verwaltet Steuern, Buchhaltung, Compliance, Controlling und Treasury"
-    ]
+    position: "Head of Finance",
+    description: {
+      de: [
+        "Mit Greencells seit 2020",
+        "Strategischer Marktführer im Bereich erneuerbare Energien, spezialisiert auf Photovoltaik, mit fundiertem Finanzwissen in der schlüsselfertigen EPC- und PV-Projektentwicklung",
+        "Leitet die Finanzstrategie und -kontrolle, optimiert Ressourcen, verwaltet Steuern, Buchhaltung, Compliance, Controlling und Treasury"
+      ],
+      en: [
+        "With Greencells since 2020",
+        "Strategic leader in renewables, specialized in PV, with solid financial expertise in turnkey EPC and PV project development",
+        "Leads finance strategy and control, optimizes resources, manages tax, accounting, compliance, controlling and treasury"
+      ]
+    }
   },
   {
     name: "Darina Decheva",
     position: "Head of Investment Management",
-    description: [
-      "Mit Greencells seit 2019", 
-      "Erfahrener Manager mit mehr als 12 Jahren Erfahrung in der Finanzierung erneuerbarer Energien, spezialisiert auf Fusionen und Übernahmen, strukturierte Finanzierung und Projektfinanzierung in Europa und Afrika",
-      "Nachweisliche Erfolgsbilanz beim erfolgreichen Abschluss komplexer Geschäfte und der Leitung grenzüberschreitender Transaktionen im Bereich saubere Energien, mit einem tiefen Verständnis für Markttrends und regulatorische Rahmenbedingungen in mehreren Rechtsprechungen"
-    ]
+    description: {
+      de: [
+        "Mit Greencells seit 2019",
+        "Erfahrener Manager mit mehr als 12 Jahren Erfahrung in der Finanzierung erneuerbarer Energien, spezialisiert auf Fusionen und Übernahmen, strukturierte Finanzierung und Projektfinanzierung in Europa und Afrika",
+        "Nachweisliche Erfolgsbilanz beim erfolgreichen Abschluss komplexer Geschäfte und der Leitung grenzüberschreitender Transaktionen im Bereich saubere Energien, mit einem tiefen Verständnis für Markttrends und regulatorische Rahmenbedingungen in mehreren Rechtsprechungen"
+      ],
+      en: [
+        "With Greencells since 2019",
+        "Experienced manager with 12+ years in renewable energy finance, specializing in M&A, structured finance and project finance in Europe and Africa",
+        "Proven track record closing complex deals and leading cross-border clean energy transactions, with deep understanding of market trends and regulatory frameworks across multiple jurisdictions"
+      ]
+    }
   }
 ];
 

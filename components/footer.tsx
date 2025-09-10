@@ -89,12 +89,12 @@ export function Footer() {
 
           {/* Services */}
           <div>
-            <h3 className="font-semibold text-lg mb-4">Unsere Services</h3>
+            <h3 className="font-semibold text-lg mb-4">{t.footer.servicesTitle}</h3>
             <ul className="space-y-2 text-gray-300 text-sm">
-              <li>Projektentwicklung</li>
-              <li>EPC Services</li>
-              <li>Flächenakquise</li>
-              <li>Finanzierung</li>
+              <li>{t.footer.services.projectDevelopment}</li>
+              <li>{t.footer.services.epcServices}</li>
+              <li>{t.footer.services.landAcquisition}</li>
+              <li>{t.footer.services.financing}</li>
             </ul>
           </div>
         </div>

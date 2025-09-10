@@ -97,12 +97,12 @@ export function ServicesSection() {
           </h3>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map((benefit, index) => (
+            {benefits.map((benefit) => (
               <motion.div
-                key={index}
+                key={benefit.title}
                 initial={{ opacity: 0, y: 30, scale: 0.95 }}
                 whileInView={{ opacity: 1, y: 0, scale: 1 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
                 whileHover={{ y: -5, transition: { duration: 0.2 } }}
               >
@@ -139,10 +139,10 @@ export function ServicesSection() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {t.services.cooperation.items.map((item, index) => (
               <motion.div
-                key={index}
+                key={item}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.05 }}
+                transition={{ duration: 0.6, delay: 0.05 }}
                 viewport={{ once: true }}
                 className="flex items-start gap-4 p-4 rounded-lg hover:bg-gray-50 transition-colors duration-200"
               >
@@ -165,16 +165,16 @@ export function ServicesSection() {
             className="flex flex-wrap justify-center gap-3 mt-8 pt-8 border-t border-gray-200"
           >
             <Badge variant="secondary" className="bg-green-100 text-green-800 px-4 py-2">
-              Tier 1 Qualität
+              {t.services.badges.tier1Quality}
             </Badge>
             <Badge variant="secondary" className="bg-blue-100 text-blue-800 px-4 py-2">
-              Schlüsselfertig
+              {t.services.badges.turnkey}
             </Badge>
             <Badge variant="secondary" className="bg-purple-100 text-purple-800 px-4 py-2">
-              Kein Umsetzungsrisiko
+              {t.services.badges.noImplementationRisk}
             </Badge>
             <Badge variant="secondary" className="bg-yellow-100 text-yellow-800 px-4 py-2">
-              EPC + Entwicklung
+              {t.services.badges.epcDev}
             </Badge>
           </motion.div>
         </motion.div>
@@ -188,7 +188,7 @@ export function ServicesSection() {
           className="mt-20"
         >
           <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-12 text-center">
-            Projektentwicklungsphasen
+            {t.services.process.title}
           </h3>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -200,7 +200,7 @@ export function ServicesSection() {
                 iconColor: "text-red-600"
               },
               {
-                stage: "Mid Development Stage", 
+                stage: "Mid Development Stage",
                 items: ["Site secured", "Positive grid assessment, connection offer", "Environmental assessment"],
                 color: "bg-yellow-50 border-yellow-200",
                 iconColor: "text-yellow-600"
@@ -213,10 +213,10 @@ export function ServicesSection() {
               }
             ].map((phase, index) => (
               <motion.div
-                key={index}
+                key={phase.stage}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.2 }}
+                transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
               >
                 <Card className={`p-6 h-full border-2 ${phase.color} hover:shadow-lg transition-shadow duration-300`}>
@@ -230,8 +230,8 @@ export function ServicesSection() {
                       </h4>
                     </div>
                     <ul className="space-y-3">
-                      {phase.items.map((item, itemIndex) => (
-                        <li key={itemIndex} className="flex items-start gap-2">
+                      {phase.items.map((item) => (
+                        <li key={`${phase.stage}-${item}`} className="flex items-start gap-2">
                           <CheckCircle className={`h-4 w-4 ${phase.iconColor} mt-0.5 flex-shrink-0`} />
                           <span className="text-gray-700 text-sm">{item}</span>
                         </li>
