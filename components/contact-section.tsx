@@ -9,15 +9,14 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { motion } from 'framer-motion';
-import { 
-  Mail, 
-  Phone, 
-  MapPin, 
+import {
+  Mail,
+  Phone,
+  MapPin,
   Globe,
-  Send,
   CheckCircle,
   AlertCircle,
-  Building
+  Send
 } from 'lucide-react';
 import { toast } from 'sonner';
 
@@ -38,7 +37,6 @@ export function ContactSection() {
     subject: '',
     message: ''
   });
-  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -48,43 +46,45 @@ export function ContactSection() {
     }));
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     if (!formData.name || !formData.email || !formData.message) {
-      toast.error('Bitte füllen Sie alle Pflichtfelder aus.');
+      toast.error(t.contact.form.error);
       return;
     }
 
-    setIsSubmitting(true);
+    // Erstelle mailto-Link mit den Formulardaten
+    const recipient = 'it@gc.dev';
+    const subject = formData.subject || t.contact.form.defaultSubject;
+    const body = `${t.contact.form.emailTemplate.greeting}
 
-    try {
-      const response = await fetch('/api/contact', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      });
+${t.contact.form.emailTemplate.name}: ${formData.name}
+${t.contact.form.emailTemplate.email}: ${formData.email}
+${formData.company ? `${t.contact.form.emailTemplate.company}: ${formData.company}` : ''}
 
-      if (response.ok) {
-        toast.success(t.contact.form.success);
-        setFormData({
-          name: '',
-          email: '',
-          company: '',
-          subject: '',
-          message: ''
-        });
-      } else {
-        throw new Error('Submission failed');
-      }
-    } catch (error) {
-      console.error('Contact form error:', error);
-      toast.error(t.contact.form.error);
-    } finally {
-      setIsSubmitting(false);
-    }
+${t.contact.form.emailTemplate.message}:
+${formData.message}
+
+${t.contact.form.emailTemplate.signature}`;
+
+    // URL-encode die Parameter
+    const mailtoLink = `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+    // Öffne den Standard-E-Mail-Client
+    window.location.href = mailtoLink;
+
+    // Zeige Erfolgs-Toast
+    toast.success(t.contact.form.success);
+
+    // Formular zurücksetzen
+    setFormData({
+      name: '',
+      email: '',
+      company: '',
+      subject: '',
+      message: ''
+    });
   };
 
   const contactInfo = [
@@ -102,13 +102,6 @@ export function ContactSection() {
       href: `tel:${companyInfo.phone.replace(/\s/g, '')}`,
       color: 'text-green-600',
       bgColor: 'bg-green-50'
-    },
-    {
-      icon: Mail,
-      label: 'Fax',
-      value: companyInfo.fax,
-      color: 'text-purple-600',
-      bgColor: 'bg-purple-50'
     },
     {
       icon: Globe,
@@ -236,24 +229,16 @@ export function ContactSection() {
 
                   <Button
                     type="submit"
-                    disabled={isSubmitting}
-                    className="w-full bg-green-600 hover:bg-green-700 text-white py-3 text-lg font-semibold disabled:opacity-50"
+                    className="w-full bg-green-600 hover:bg-green-700 text-white py-3 text-lg font-semibold"
                   >
-                    {isSubmitting ? (
-                      <div className="flex items-center justify-center gap-2">
-                        <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
-                        Wird gesendet...
-                      </div>
-                    ) : (
-                      <div className="flex items-center justify-center gap-2">
-                        <Send className="h-5 w-5" />
-                        {t.contact.form.submit}
-                      </div>
-                    )}
+                    <div className="flex items-center justify-center gap-2">
+                      <Send className="h-5 w-5" />
+                      {t.contact.form.submit}
+                    </div>
                   </Button>
 
                   <p className="text-sm text-gray-600 text-center">
-                    * Pflichtfelder
+                    {t.contact.form.requiredFields}
                   </p>
                 </form>
               </CardContent>
@@ -314,20 +299,17 @@ export function ContactSection() {
                   ))}
                 </div>
               </CardContent>
-            </Card>
-
             {/* Response Time Info */}
             <Card className="p-6 bg-gradient-to-r from-green-50 to-blue-50">
               <CardContent className="p-0">
                 <div className="flex items-center gap-3 mb-4">
                   <CheckCircle className="h-6 w-6 text-green-600" />
                   <h4 className="text-lg font-semibold text-gray-900">
-                    Schnelle Antwort garantiert
+                    {t.contact.info.responseTime.title}
                   </h4>
                 </div>
                 <p className="text-gray-700">
-                  Wir antworten in der Regel innerhalb von 24 Stunden auf Ihre Anfrage. 
-                  Bei dringenden Anliegen können Sie auch direkt unser Entwicklungsteam kontaktieren.
+                  {t.contact.info.responseTime.description}
                 </p>
               </CardContent>
             </Card>
@@ -338,17 +320,19 @@ export function ContactSection() {
                 <div className="flex items-center gap-3 mb-4">
                   <AlertCircle className="h-6 w-6 text-blue-600" />
                   <h4 className="text-lg font-semibold text-gray-900">
-                    Geschäftszeiten
+                    {t.contact.info.businessHours.title}
                   </h4>
                 </div>
                 <div className="space-y-2 text-gray-700">
-                  <p><strong>Mo - Fr:</strong> 08:00 - 18:00 Uhr</p>
-                  <p><strong>Sa:</strong> 09:00 - 14:00 Uhr</p>
-                  <p><strong>So:</strong> Geschlossen</p>
+                  <p><strong>{t.contact.info.businessHours.weekdays}</strong></p>
+                  <p><strong>{t.contact.info.businessHours.saturday}</strong></p>
+                  <p><strong>{t.contact.info.businessHours.sunday}</strong></p>
                   <p className="text-sm text-gray-600 mt-3">
-                    Außerhalb der Geschäftszeiten erreichen Sie uns per E-Mail.
+                    {t.contact.info.businessHours.note}
                   </p>
                 </div>
+              </CardContent>
+            </Card>
               </CardContent>
             </Card>
           </motion.div>

@@ -108,14 +108,35 @@ export const translations = {
         company: "Unternehmen",
         subject: "Betreff",
         message: "Nachricht",
-        submit: "Nachricht senden",
-        success: "Vielen Dank für Ihre Nachricht. Wir werden uns schnellstmöglich bei Ihnen melden.",
-        error: "Es ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut."
+        submit: "E-Mail öffnen",
+        success: "Ihr E-Mail-Client wird geöffnet. Bitte senden Sie die E-Mail ab.",
+        error: "Bitte füllen Sie alle Pflichtfelder aus.",
+        defaultSubject: "Kontaktanfrage von der Website",
+        requiredFields: "* Pflichtfelder",
+        emailTemplate: {
+          greeting: "Hallo,",
+          name: "Name",
+          email: "E-Mail",
+          company: "Unternehmen",
+          message: "Nachricht",
+          signature: "Mit freundlichen Grüßen"
+        }
       },
       info: {
         address: "Adresse",
         phone: "Telefon",
-        web: "Website"
+        web: "Website",
+        responseTime: {
+          title: "Schnelle Antwort garantiert",
+          description: "Wir antworten in der Regel innerhalb von 24 Stunden auf Ihre Anfrage. Bei dringenden Anliegen können Sie auch direkt unser Entwicklungsteam kontaktieren."
+        },
+        businessHours: {
+          title: "Geschäftszeiten",
+          weekdays: "Mo - Fr: 08:00 - 18:00 Uhr",
+          saturday: "Sa: 09:00 - 14:00 Uhr",
+          sunday: "So: Geschlossen",
+          note: "Außerhalb der Geschäftszeiten erreichen Sie uns per E-Mail."
+        }
       }
     },
     footer: {
@@ -229,16 +250,37 @@ export const translations = {
       form: {
         name: "Name",
         email: "Email",
-        company: "Company", 
+        company: "Company",
         subject: "Subject",
         message: "Message",
-        submit: "Send Message",
-        success: "Thank you for your message. We will get back to you as soon as possible.",
-        error: "An error occurred. Please try again."
+        submit: "Open Email",
+        success: "Your email client will open. Please send the email.",
+        error: "Please fill in all required fields.",
+        defaultSubject: "Contact inquiry from website",
+        requiredFields: "* Required fields",
+        emailTemplate: {
+          greeting: "Hello,",
+          name: "Name",
+          email: "Email",
+          company: "Company",
+          message: "Message",
+          signature: "Best regards"
+        }
       },
       info: {
         address: "Address",
         phone: "Phone",
+        responseTime: {
+          title: "Quick Response Guaranteed",
+          description: "We typically respond to your inquiry within 24 hours. For urgent matters, you can also contact our development team directly."
+        },
+        businessHours: {
+          title: "Business Hours",
+          weekdays: "Mon - Fri: 08:00 - 18:00",
+          saturday: "Sat: 09:00 - 14:00",
+          sunday: "Sun: Closed",
+          note: "Outside business hours, you can reach us via email."
+        },
         web: "Website"
       }
     },
