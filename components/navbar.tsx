@@ -1,4 +1,3 @@
-
 'use client';
 
 import React, { useState, useEffect } from 'react';
@@ -31,6 +30,11 @@ export function Navbar() {
     }
   };
 
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    setIsMobileMenuOpen(false);
+  };
+
   const navItems = [
     { id: 'company', label: t.nav.company },
     { id: 'services', label: t.nav.services },
@@ -52,7 +56,11 @@ export function Navbar() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex items-center">
-            <div className="relative h-10 w-48">
+            <button 
+              onClick={scrollToTop}
+              className="relative h-10 w-48 transition-opacity hover:opacity-80 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 rounded"
+              aria-label="Zur Startseite"
+            >
               <Image
                 src="/GC_Dev_Group_Logo_black.png"
                 alt="GC Development Group"
@@ -60,7 +68,7 @@ export function Navbar() {
                 className="object-contain"
                 priority
               />
-            </div>
+            </button>
           </div>
 
           {/* Desktop Navigation */}
